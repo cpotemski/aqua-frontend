@@ -1,0 +1,5 @@
+query playerById($id: String!){
+    playerById(id: $id) {
+        name
+    }
+}
