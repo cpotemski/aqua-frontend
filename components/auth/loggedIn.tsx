@@ -2,7 +2,7 @@ import {useLoggedInQuery} from "@api";
 import Home from "../../pages/home";
 import Registration from "@components/registration/registration";
 import {UserProvider} from "@auth0/nextjs-auth0";
-import PlayerProvider from "./playerContext";
+import PlayerContext from "./playerContext";
 
 const LoggedIn = () => {
     const {
@@ -21,7 +21,7 @@ const LoggedIn = () => {
         throw Error('No player data for context');
     }
 
-    return <PlayerProvider value={data.me}><Home/></PlayerProvider>
+    return <PlayerContext.Provider value={data.me}><Home/></PlayerContext.Provider>
 
 }
 

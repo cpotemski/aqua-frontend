@@ -1,4 +1,4 @@
 import React from 'react'
 import {PlayerContext} from "@api";
 
-export default React.createContext<PlayerContext>({id: ''}).Provider
+export default React.createContext<PlayerContext>({id: ''})
