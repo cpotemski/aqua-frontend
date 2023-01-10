@@ -2,13 +2,19 @@ import '../styles/globals.css'
 import type {AppProps} from 'next/app'
 import apollo from "../apollo-client";
 import {ApolloProvider} from '@apollo/client';
-import Link from "next/link";
+import DefaultLayout from "@components/layouts/default";
+
+import './styles.css';
+import ErrorBoundary from "@components/error/errorBoundary";
 
 function MyApp({Component, pageProps}: AppProps) {
-    return <ApolloProvider client={apollo}>
-        <Link href='/'>Home</Link>
-        <Component {...pageProps} />
-    </ApolloProvider>
+    return <ErrorBoundary>
+        <ApolloProvider client={apollo}>
+            <DefaultLayout>
+                <Component {...pageProps} />
+            </DefaultLayout>
+        </ApolloProvider>
+    </ErrorBoundary>
 }
 
 export default MyApp

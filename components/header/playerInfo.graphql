@@ -1,5 +1,11 @@
-query playerById($id: String!){
-    playerById(id: $id) {
+query me {
+    me {
+        id
         name
+        coordinates {
+            id
+            x
+            y
+        }
     }
 }

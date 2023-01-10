@@ -1,0 +1,30 @@
+.main {
+    position: absolute;
+    right: 10%;
+    top: 15%;
+    transform: translate(50%, -50%);
+}
+
+@keyframes fadeInOut {
+    50% { box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.7), 0 0 20px 0 rgba(0, 255, 255, 0.69); }
+    0%, 100% { box-shadow: 0 0 4px 0 rgba(0, 255, 255, 0.7), 0 0 5px 0 rgba(0, 255, 255, 0.69); }
+}
+
+.ring {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: 3s ease-in-out infinite forwards fadeInOut;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background: #7d7d7d;
+    border: 1px solid #7d7d7d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19), inset 0 0 8px 0 rgba(0, 0, 0, 0.7);
+}
